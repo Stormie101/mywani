@@ -1,40 +1,44 @@
 body {
-    background-color: #ffe4e1;
+    background-color: #a3d5ff;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-family: 'Sacramento';
-    color: #ff1493;
-    margin-top: 100px;
+    color: #333;
+    padding: 20px;
 }
-
 h2 {
+    font-family: 'Pacifico', cursive;
     font-size: 2.5em;
-    font-family: 'Pacifico';
+    color: #005faa;
+    margin-bottom: 10px;
 }
-
-.button {
-    padding: 10px 20px;
+p {
     font-size: 1.2em;
-    background-color: #ff69b4;
+    color: #444;
+}
+.button {
+    background: linear-gradient(135deg, #0077cc, #005faa);
     color: white;
     border: none;
-    border-radius: 20px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 15px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
 .button:hover {
-    background-color: #ff1493;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
 #secretMessage {
     display: none;
-    font-size: 1.5em;
-    color: #d63384;
+    font-size: 1.2em;
+    color: #005faa;
     margin-top: 20px;
+    font-weight: bold;
 }
-
 #secondButton {
     display: none;
-    margin-top: 20px;
 }
