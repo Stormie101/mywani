@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Time</title>
+    <link rel="icon" type="image/x-icon" href="../image/heart.png">
+    <link rel="stylesheet" href="../css/finalpage.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Our Beautiful Journey Since 25th July 2024</h2>
+        <p>We have been together for:</p>
+        <div class="countdown" id="timePassed">
+            <div class="time-box"><span class="time-value" id="years">0</span><span class="label">Years</span></div>
+            <div class="time-box"><span class="time-value" id="months">0</span><span class="label">Months</span></div>
+            <div class="time-box"><span class="time-value" id="days">0</span><span class="label">Days</span></div>
+            <div class="time-box"><span class="time-value" id="hours">0</span><span class="label">Hours</span></div>
+            <div class="time-box"><span class="time-value" id="minutes">0</span><span class="label">Minutes</span></div>
+            <div class="time-box"><span class="time-value" id="seconds">0</span><span class="label">Seconds</span></div>
+        </div>
+        <p class="message">
+            Thankyou for deciding to be my girlfriend sayang, I will cherish every second that
+            I spend with you as if it's my last, as long as our relationship clock expand, my love for you
+            will grew even larger. Just for you, my love ❤️
+        </p>
+    </div>
+
+    <script>
+        function calculateTimeSinceAnniversary() {
+            const anniversaryDate = new Date(2024, 6, 25, 0, 0, 0);
+            function updateCountdown() {
+                const now = new Date();
+                let years = now.getFullYear() - anniversaryDate.getFullYear();
+                let months = now.getMonth() - anniversaryDate.getMonth();
+                let days = now.getDate() - anniversaryDate.getDate();
+                let hours = now.getHours() - anniversaryDate.getHours();
+                let minutes = now.getMinutes() - anniversaryDate.getMinutes();
+                let seconds = now.getSeconds() - anniversaryDate.getSeconds();
+
+                if (seconds < 0) {
+                    minutes--;
+                    seconds += 60;
+                }
+                if (minutes < 0) {
+                    hours--;
+                    minutes += 60;
+                }
+                if (hours < 0) {
+                    days--;
+                    hours += 24;
+                }
+                if (days < 0) {
+                    months--;
+                    const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                    days += previousMonth.getDate();
+                }
+                if (months < 0) {
+                    years--;
+                    months += 12;
+                }
+
+                document.getElementById("years").innerText = years;
+                document.getElementById("months").innerText = months;
+                document.getElementById("days").innerText = days;
+                document.getElementById("hours").innerText = hours;
+                document.getElementById("minutes").innerText = minutes;
+                document.getElementById("seconds").innerText = seconds;
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+        
+        calculateTimeSinceAnniversary();
+    </script>
+</body>
+</html>

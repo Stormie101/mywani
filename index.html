@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Cutie!</title>
+    <link rel="icon" type="image/x-icon" href="image/heart.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Welcome, My Sweet Shazwani! 💖</h2>
+    <p>You are the most beautiful thing that ever happened to me! 🌸</p>
+
+    <button class="button" onclick="showMessage()">Click Sini!</button>
+
+    <p id="secretMessage">You're the reason I wake up every single day to be a better person than yesterday,<br>
+    Thankyou for being the brightest star that fill my empty night-sky sayang💕</p>
+
+    <button id="secondButton" class="button" onclick="showAnotherMessage()">Mbaaa!</button>
+
+    <script>
+        function showMessage() {
+            document.getElementById("secretMessage").style.display = "block";
+
+            setTimeout(function() {
+                document.getElementById("secondButton").style.display = "inline-block";
+            }, 3000); // Show second button after 3 seconds
+        }
+
+        function showAnotherMessage() {
+            alert("JOM NEXT PAGE!");
+            window.location.href = "html/surprise.html"; // Redirect to another page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for You ❤️</title>
+    <link rel="icon" type="image/x-icon" href="image/heart.png">
+    <link rel="stylesheet" href="../css/nextpage.css">
+</head>
+<body>
+    <div class="message-container">
+        <h2>The Best Picture Of All Time</h2>
+        <img id="specialImage" src="../image/imagus6.jpeg" alt="Our Special Moment">
+        <p>
+            This is Shazwani, love of my life and will always be.<br>
+            I love this picture because hahaha no lah saja je, I have other favourite picture haha
+            But there's a reason why I put this picture, not just for troll(most of it is to troll)
+            The picture there is the old you, the one that i didnt get to know but I'm glad that I
+            get to know the version of you right now because all i know, I definitely like this one better
+            Do not be ashame of what your past did to you, just look up and move forward with me okay love?
+            whatever in the past stay in the past, thinking about it will not undo our action so let's move forward
+            together ❤️ Wait for the timer to finish ❤️
+        </p>
+        <p id="timer"></p>
+        <a href="finalpage.html" class="next-button" id="nextButton" style="display: none;">Jom, Next Page</a>
+    </div>
+
+    <script>
+        let timeLeft = 20;
+        const timerElement = document.getElementById("timer");
+        const nextButton = document.getElementById("nextButton");
+        const specialImage = document.getElementById("specialImage");
+
+        function updateTimer() {
+            if (timeLeft > 0) {
+                timerElement.innerText = `Wait for ${timeLeft} seconds...`;
+                timeLeft--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                timerElement.innerText = "'One' Of Favourite Picture";
+                nextButton.style.display = "inline-block";
+                specialImage.src = "../image/imagus7.jpeg"; // Change to a new image
+            }
+        }
+        updateTimer();
+    </script>
+</body>
+</html>
